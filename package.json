@@ -1,6 +1,6 @@
 {
   "name": "powerball-picker",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Uses true randomness to pick 5 powerball numbers and the 1 powerball",
   "keywords": [
     "powerball",
