@@ -1,0 +1,22 @@
+{
+  "name": "powerball-picker",
+  "version": "1.0.2",
+  "description": "Uses true randomness to pick 5 powerball numbers and the 1 powerball",
+  "keywords": [
+    "powerball",
+    "true random",
+    "random",
+    "lottery"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/index.js",
+    "start": "node index.js"
+  },
+  "author": "Marcus Domingo",
+  "license": "MIT",
+  "dependencies": {
+    "mutexify": "^1.2.0",
+    "random-org": "^0.1.6"
+  }
+}
