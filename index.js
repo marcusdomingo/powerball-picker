@@ -19,6 +19,7 @@ var pickPowerball = function(api_key, callback) {
   var data = {};
   const random = new Random({ apiKey: api_key})
       for (let i = 0; i < 5; i++) {
+      lock(release => {
       random.generateIntegers({ min: 1, max: 69, n: 5, replacement: false })
                   .then(res => {
                       var numbers = res.random.data.sort((a, b) => { return a - b }).toString();
@@ -29,8 +30,10 @@ var pickPowerball = function(api_key, callback) {
                               data.powerball = res.random.data.toString();
                               if (i == 4)
                                 callback(data);
+                              release()
                           })
                   })
+          })
       }
 }
 
