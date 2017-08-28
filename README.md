@@ -14,7 +14,10 @@ $ npm install powerball-picker
 ```javascript
 var powerball = require('powerball-picker');
 var apiKey = "123456789-123456-apiKey" // obtained from Random.org API
-powerball.pickPowerball({ apiKey: apiKey });
+var client = new powerball(apiKey);
+client.pickPowerball(data => {
+    console.log(data.numbers + " " + data.powerball);
+});
 ```
 
 ## Disclaimer
